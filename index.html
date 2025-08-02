@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/icon" href="./assets/logo/fotogram_logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <title>Fotogram</title>
+</head>
+<body onload="galleryInit();">
+
+    <header class="header_container">
+        <img class="logo" src="./assets/logo/fotogram_logo.png"  alt="Fotogram-Logo">
+        <h1>Fotogram</h1>
+    </header>
+
+    <main>
+        <h2>Your personal photo album</h2>
+        <div id="content" class="content"></div>
+    </main>
+
+    <dialog id="overlay" class="overlay">
+        <div id="image-box-container">
+            <div id="content-box-header">
+                <span id="image-box-name"></span>
+                <img onclick="closeOverlay()" id="btn-box-close" title="schließen" src="./assets/icons/close.png">
+            </div>
+            <div id="display-image-box">
+                <img id="image-box" alt="">
+            </div>
+            <div id="content-box-footer">
+                <img onclick="changePrev()" id="pri-img" src="./assets/icons/prev.png">
+                <span id="image-number-box"></span>
+                <img  onclick="changeNext()" id="nex-img" src="./assets/icons/next.png">
+            </div>
+        </div>
+    </dialog>
+
+    <footer>
+    <div class="footer_content">
+        <a href="https://developerakademie.com/..." target="_blank" rel="noopener noreferrer">
+            <img class="da_logo" src="./assets/logo/da_logo.png"  alt="Developer Akademie">
+        </a>
+        <p>&#169; 2021 Developer Akademie GmbH</p>
+    </div>
+</footer>
+
+</body>
+</html>
